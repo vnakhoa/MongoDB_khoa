@@ -1,0 +1,17 @@
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+    {{#each newCourses}}
+    <div style="width: 200px; border: 1px solid red">
+        <div>
+            <a href="courses/{{this.slug}}">
+                <img src="{{this.image}}" style="width: 100%">
+            </a>
+        </div>
+        <div>
+            <a href="courses/{{this.slug}}">
+                <h2>{{this.name}}</h2>
+            </a>
+            <h5>{{this.description}}</h5>
+        </div>
+    </div>
+    {{/each}}
+</div>

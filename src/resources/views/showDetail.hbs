@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col">
+            <button>HỌC NGAY</button>
+        </div>
+        <div class="col">
+            {{#each newCourses}}
+            <div>
+                <div>
+                    <div style="width: 400px">
+                        <img src="{{this.image}}" style="width: 100%">
+                    </div>
+                </div>
+                <div>
+                    <h3>{{this.name}}</h3>
+                    <h4>{{this.description}}</h4>
+                </div>
+            </div>
+
+            {{/each}}
+        </div>
+
+    </div>
+</div>

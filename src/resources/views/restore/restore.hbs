@@ -1,0 +1,32 @@
+<div class="mt-3">
+    <h2>Lich sử khóa học đã xóa</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên khóa học</th>
+                <th scope="col">Mô tả</th>
+                <th scope="col">Thời gian tạo</th>
+                <th scope="col">Thời gian xóa</th>
+                <th scope="col" colspan="1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each courseDeleted}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>{{this.deletedAt}}</td>
+                <td>
+                    <form method="POST" action="/courses/{{this._id}}/restore?_method=PATCH">
+                        <button class="btn btn-link" type="submit">Khôi phục</button>
+                    </form>
+                </td>
+
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
